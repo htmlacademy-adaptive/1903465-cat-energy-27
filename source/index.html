@@ -6,23 +6,30 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="#">
-        <img class="main-header__logo-image" src="#" width="191" height="38" alt="Логотип интернет-магазина CAT ENERGY.">
-      </a>
+      <span class="main-header__logo">
+        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип интернет-магазина CAT ENERGY.">
+        <img class="main-header__logo" src="img/logo-mobile-2.svg" width="102" height="18" alt="«Кэт энерджи».">
+      </span>
       <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__link">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Меню.</span>
+        </button>
+        <div class="main-nav__wrappper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
+
     <main class="main">
       <h1 class="visually-hidden">Интернет-магазин CAT ENERGY.</h1>
       <section class="promo">
@@ -100,7 +107,11 @@
 
         </div>
       </section>
-      <section class="contacts">
+
+    </main>
+
+    <footer class="main-footer">
+      <section class="main-footer__contacts contacts">
         <h2 class="visually-hidden">Наш адрес.</h2>
         <div class="contacts__info-wrapper">
           <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
@@ -111,12 +122,9 @@
         </div>
         <div class="contacts__map-wrapper"></div>
       </section>
-    </main>
-
-    <footer class="main-footer">
       <div class="main-footer__wrapper">
         <a class="main-footer__logo-link" href="#">
-          <img class="main-footer__logo-image" src="#" width="128" height="24" alt="Логотип CAT ENERGY.">
+          <img class="main-header__logo" src="img/logo-mobile-2.svg" width="102" height="18" alt="«Кэт энерджи».">
         </a>
         <section class="main-footer__social social">
           <h2 class="visually-hidden">Наша компания в соцсетях.</h2>
