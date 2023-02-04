@@ -1,0 +1,21 @@
+.contacts {
+  background-color: $white;
+}
+
+.contacts__title {
+  width: 139px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $dark-grey-3;
+}
+
+.contacts__text {
+  width: 139px;
+  margin: 0;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $dark-grey;
+}

@@ -1,0 +1,17 @@
+.button {
+  @include input-reset;
+  display: block;
+  width: 100%;
+  padding: 12px 12px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: $white;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+
+  border: none;
+  cursor: pointer;
+}
