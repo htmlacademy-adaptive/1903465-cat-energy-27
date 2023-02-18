@@ -41,41 +41,49 @@
           <div class="form__wrapper">
             <fieldset class="form__fieldset form__fieldset--cat">
               <legend class="visually-hidden">Данные кота.</legend>
-              <p class="form__field-group form__field-group--name">
-                <label class="form__label">ИМЯ:*
-                  <input class="form__field" type="text" name="form-name" placeholder="Барсик" required>
-                </label>
-              </p>
-              <p class="form__field-group form__field-group--weight">
-                <label class="form__label">Вес (кг):*
-                  <input class="form__field" type="number" name="form-weight" placeholder="7" required>
-                </label>
-              </p>
-              <p class="form__field-group form__field-group--age">
-                <label class="form__label">Возраст (лет):
-                  <input class="form__field" type="number" name="form-age" placeholder="7">
-                </label>
-              </p>
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="form__label">
+                    <span class="form__label-name">ИМЯ:*</span>
+                    <input class="form__field" type="text" name="form-name" placeholder="Барсик" required>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__label">
+                    <span class="form__label-name">Вес&nbsp;(кг):*</span>
+                    <input class="form__field" type="text" name="form-weight" placeholder="7" required>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__label">
+                    <span class="form__label-name">Возраст&nbsp;(лет):</span>
+                    <input class="form__field" type="text" name="form-age" placeholder="7">
+                  </label>
+                </li>
+              </ul>
             </fieldset>
 
             <fieldset class="form__fieldset form__fieldset--program">
               <legend class="visually-hidden">Выбор программы питания.</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <label class="form__label">
-                    <input class="form__control-input" type="radio" name="selection-group" value="weight-loss" checked>
+                  <label class="form__label form__label--radio">
+                    <input class="form__control-input visually-hidden" type="radio" name="selection-group" value="weight-loss" checked>
+                    <span class="form__mark"></span>
                     <span class="form__radio-text">Похудение</span>
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">
-                    <input class="form__control-input" type="radio" name="selection-group" value="weight-gain">
+                  <label class="form__label form__label--radio">
+                    <input class="form__control-input visually-hidden" type="radio" name="selection-group" value="weight-gain">
+                    <span class="form__mark"></span>
                     <span class="form__radio-text">Набор массы</span>
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">
-                    <input class="form__control-input" type="radio" name="selection-group" value="need-advice">
+                  <label class="form__label form__label--radio">
+                    <input class="form__control-input visually-hidden" type="radio" name="selection-group" value="need-advice">
+                    <span class="form__mark"></span>
                     <span class="form__radio-text">Не знаю (нужен ваш совет)</span>
                   </label>
                 </li>
@@ -98,8 +106,10 @@
           </fieldset>
 
           <div class="form__comment">
-            <h2 class="form__subtitle form__subtitle--comment">Комментарий</h2>
-            <textarea class="form__textarea" id="form-comment" name="form-comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <label class="form__label  form__label--comment">
+              <span class="form__subtitle form__subtitle--comment">Комментарий</span>
+              <textarea class="form__textarea" name="form-comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </label>
           </div>
 
           <fieldset class="form__fieldset">
@@ -107,25 +117,25 @@
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label">
-                  <input class="form__control-input" type="checkbox"  name="sweetener" checked>
+                  <input class="form__control-input" type="checkbox"  name="additional-goods" value="sweetener" checked>
                   <span>Сахарозаменитель</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__label">
-                  <input class="form__control-input" type="checkbox"  name="drinking-water" checked>
+                  <input class="form__control-input" type="checkbox"  name="additional-goods" value="water">
                   <span>Питьевая вода</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__label">
-                  <input class="form__control-input" type="checkbox"  name="milk" checked>
+                  <input class="form__control-input" type="checkbox"  name="additional-goods" value="milk">
                   <span>Молоко</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__label">
-                  <input class="form__control-input" type="checkbox"  name="vitamins" checked>
+                  <input class="form__control-input" type="checkbox"  name="additional-goods" value="vitamins">
                   <span>Витамины</span>
                 </label>
               </li>
