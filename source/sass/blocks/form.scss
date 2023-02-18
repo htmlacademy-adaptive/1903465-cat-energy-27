@@ -64,6 +64,12 @@
     padding-left: 45px;
   }
 
+  &--checkbox {
+    position: relative;
+    padding-top: 10px;
+    padding-left: 45px;
+  }
+
   &--comment {
     display: block;
     width: 280px;
@@ -114,8 +120,35 @@
   }
 }
 
+.form__mark-checkbox {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color-very-light-grey;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    background-image: url("../../img/svg/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+  }
+}
+
 .form__control-input:checked + .form__mark::before {
   background-color: $color-apple;
+}
+
+.form__control-input:checked + .form__mark-checkbox::before {
+  opacity: 1;
 }
 
 .form__comment {

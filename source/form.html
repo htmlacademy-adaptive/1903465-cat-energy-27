@@ -92,7 +92,9 @@
           </div>
 
           <fieldset class="form__fieldset form__fieldset--owner">
-            <legend class="form__subtitle">Контактные данные (владельца кота)</legend>
+            <legend class="form__subtitle form__subtitle--decoration">
+              <span class="form__subtitle-accent">Контактные данные (владельца кота)</span>
+            </legend>
             <p class="form__field-group form__field-group--email">
               <label class="form__label">E-mail:*
                 <input class="form__field" type="email" name="form-email" placeholder="kuklachev@gmail.com" required>
@@ -106,36 +108,42 @@
           </fieldset>
 
           <div class="form__comment">
-            <label class="form__label  form__label--comment">
-              <span class="form__subtitle form__subtitle--comment">Комментарий</span>
+            <label class="form__label  form__label--comment form__subtitle--decoration">
+              <span class="form__subtitle form__subtitle-accent form__subtitle--comment">Комментарий</span>
               <textarea class="form__textarea" name="form-comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </div>
 
           <fieldset class="form__fieldset">
-            <legend class="form__subtitle">Дополнительно</legend>
+            <legend class="form__subtitle form__subtitle--decoration">
+              <span class="form__subtitle-accent">Дополнительно</span>
+            </legend>
             <ul class="form__list">
               <li class="form__item">
-                <label class="form__label">
-                  <input class="form__control-input" type="checkbox"  name="additional-goods" value="sweetener" checked>
+                <label class="form__label form__label--checkbox">
+                  <input class="form__control-input visually-hidden" type="checkbox"  name="additional-goods" value="sweetener" checked>
+                  <span class="form__mark-checkbox"></span>
                   <span>Сахарозаменитель</span>
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__label">
-                  <input class="form__control-input" type="checkbox"  name="additional-goods" value="water">
+                <label class="form__label form__label--checkbox">
+                  <input class="form__control-input visually-hidden" type="checkbox"  name="additional-goods" value="water">
+                  <span class="form__mark-checkbox"></span>
                   <span>Питьевая вода</span>
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__label">
-                  <input class="form__control-input" type="checkbox"  name="additional-goods" value="milk">
+                <label class="form__label form__label--checkbox">
+                  <input class="form__control-input visually-hidden" type="checkbox"  name="additional-goods" value="milk">
+                  <span class="form__mark-checkbox"></span>
                   <span>Молоко</span>
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__label">
-                  <input class="form__control-input" type="checkbox"  name="additional-goods" value="vitamins">
+                <label class="form__label form__label--checkbox">
+                  <input class="form__control-input visually-hidden" type="checkbox"  name="additional-goods" value="vitamins">
+                  <span class="form__mark-checkbox"></span>
                   <span>Витамины</span>
                 </label>
               </li>
