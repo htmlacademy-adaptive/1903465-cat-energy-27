@@ -3,10 +3,46 @@
   min-height: 65px;
   margin: 0 auto;
   padding: 10px 0 17px;
+
+  @media (min-width: $vp-768) {
+    display: flex;
+    justify-content: space-between;
+    width: 706px;
+    min-height: 54px;
+    padding: 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    width: 1220px;
+  }
 }
 
 .main-header__logo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 191px;
+  pointer-events: none;
+
+  img {
+    pointer-events: all;
+  }
+
+  @media (min-width: $vp-768) {
+    width: 174px;
+  }
+}
+
+.main-header__logo-image {
+  @media (min-width: $vp-1440) {
+    width: 71px;
+    height: 59px;
+  }
+}
+
+.main-header__logo-image-2 {
+  @media (min-width: $vp-1440) {
+    width: 118px;
+    height: 22px;
+  }
 }

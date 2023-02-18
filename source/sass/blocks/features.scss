@@ -1,0 +1,13 @@
+.features__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.features__text {
+  margin: 0;
+  font-family: $ff-lato;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-charcoal;
+}

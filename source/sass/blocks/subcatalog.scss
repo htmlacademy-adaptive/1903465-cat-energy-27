@@ -1,0 +1,59 @@
+.subcatalog__title {
+  margin: 0;
+  padding: 25px 0 36px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.subcatalog__list {
+  @include list-reset;
+  margin-bottom: 35px;
+}
+
+.subcatalog__item {
+  width: 280px;
+  margin: 0 auto;
+  padding: 13px 0 19px;
+  border-top: 1px solid $color-very-light-grey;
+
+  &:last-child {
+    border-bottom: 1px solid $color-very-light-grey;
+  }
+}
+
+.subcatalog__wrapper {
+  position: relative;
+  width: 280px;
+  min-height: 290px;
+  margin: 0 auto 35px;
+  padding: 59px 0 43px;
+  background-image: url("../../img/catalog/gift.jpg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $color-white;
+  z-index: -1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 280px;
+    min-height: 290px;
+    background-color: rgba(104, 183, 56, 0.85);
+    top: 0;
+    left: 0;
+    margin: auto;
+    z-index: -1;
+  }
+}
+
+.subcatalog__slogan {
+  width: 170px;
+  margin: 0 auto;
+  padding-top: 128px;
+  font-family: $ff-lato;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+}

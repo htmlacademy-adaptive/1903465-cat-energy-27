@@ -1,20 +1,30 @@
 .main-footer {
-  background-color: $basic-grey;
+  background-color: $color-white-smoke;
 }
 
-.main-footer__address {
-  display: flex;
-  justify-content: space-between;
-  width: 280px;
-  margin: 0 auto;
-  padding: 26px 0;
-  font-style: normal;
-  background-color: $white;
+.main-footer__wrapper {
+  @media (min-width: $vp-768) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 708px;
+    margin: 0 auto;
+    padding: 55px 0 55px 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    width: 1220px;
+    padding: 66px 0 66px 0;
+  }
 }
 
 .main-footer__logo-link {
   display: flex;
   padding: 40px 0 20px;
+
+  @media (min-width: $vp-768) {
+    padding: 0;
+  }
 }
 
 .main-footer__logo {
@@ -28,6 +38,96 @@
   margin: 0 auto;
 }
 
+.main-footer__social-list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 28px);
+  gap: 24px;
+  justify-content: center;
+  padding: 20px 0 18px;
+  border-top: 1px solid $color-gainsboro;
+  border-bottom: 1px solid $color-gainsboro;
+
+  @media (min-width: $vp-768) {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.main-footer__social-link {
+  display: flex;
+  width: 28px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &:hover .main-footer__social-icon,
+  &:focus .main-footer__social-icon {
+    color: $color-apple;
+  }
+
+  &:active .main-footer__social-icon {
+    color: $color-apple;
+    opacity: 0.3;
+  }
+}
+
+.main-footer__social-icon {
+  color: $color-dim-gray;
+}
+
 .main-footer__copyright {
   padding: 20px 0 40px;
+
+  @media (min-width: $vp-768) {
+    padding: 0;
+  }
+}
+
+.main-footer__copyright-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 280px;
+  width: 100%;
+  height: 34px;
+  margin: 0 auto;
+  color: $color-charcoal;
+  // pointer-events: none;
+
+  @media (min-width: $vp-768) {
+    display: flex;
+    justify-content: space-between;
+    max-width: 168px;
+    min-height: 37px;
+    width: 168px;
+  }
+
+  img {
+    pointer-events: all;
+  }
+
+  &:active .main-footer__copyright-title {
+    opacity: 0.3;
+  }
+
+  &:hover .main-footer__copyright-icon,
+  &:focus .main-footer__copyright-icon {
+    color: $color-apple;
+  }
+
+  &:active .main-footer__copyright-icon {
+    color: $color-apple;
+    opacity: 0.3;
+  }
+}
+
+.main-footer__copyright-title {
+  font-family: $ff-lato;
+  line-height: 19px;
+  color: $color-charcoal;
+}
+
+.main-footer__copyright-icon {
+  color: $color-dim-gray;
 }

@@ -4,14 +4,24 @@
   width: 100%;
   padding: 12px 12px;
 
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $ff-oswald;
   font-size: 14px;
   line-height: 18px;
-  background-color: $white;
-  color: $black;
+  background-color: $color-white;
+  color: $color-black;
   text-align: center;
   text-transform: uppercase;
 
   border: none;
   cursor: pointer;
+
+  &--accent {
+    background-color: $color-apple;
+    color: $color-white;
+  }
+
+  &--second {
+    background-color: $color-white-smoke;
+    color: $color-charcoal;
+  }
 }

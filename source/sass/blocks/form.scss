@@ -1,0 +1,110 @@
+.form {
+  padding-top: 27px;
+  border-top: 1px solid $color-gainsboro;
+}
+
+.form__title {
+  width: 280px;
+  margin: 0 auto 37px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.form__text {
+  width: 280px;
+  margin: 0 auto 15px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.form__fieldset {
+  @include fieldset-reset;
+  padding: 11px 0 14px;
+
+  &--cat {
+    padding: 24px 0 24px;
+    border-bottom: 1px solid $color-gainsboro;
+    color: $color-charcoal;
+  }
+
+  &--program {
+    padding: 22px 0 19px;
+    border-bottom: 1px solid $color-gainsboro;
+    color: $color-nero;
+  }
+
+  &--owner {
+    padding: 26px 0 12px;
+    color: $color-charcoal;
+  }
+}
+
+.form__comment {
+  padding: 12px 0 11px;
+}
+
+.form__textarea {
+  display: block;
+  min-width: 280px;
+  min-height: 151px;
+  margin: 0 auto;
+  padding: 10px 12px 10px 15px;
+  border: 1px solid $color-whisper-4;
+
+  &::placeholder {
+    font-family: $ff-oswald;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-charcoal;
+    text-transform: uppercase;
+  }
+}
+
+.form__subtitle {
+  margin-bottom: 35px;
+  padding: 0;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+
+  &--comment {
+    margin: 0 0 38px;
+  }
+}
+
+.form__field-group {
+  margin: 0;
+  font-size: 16px;
+  line-height: 18px;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+.form__list {
+  @include list-reset;
+}
+
+.form__submit {
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px 0 32px;
+}
+
+.form__submit-button {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 12px;
+  margin-bottom: 21px;
+}
+
+.form__text-required {
+  display: block;
+  font-family: $ff-lato;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}

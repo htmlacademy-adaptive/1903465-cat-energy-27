@@ -1,31 +1,131 @@
 .advantages__wrapper {
   width: 280px;
   margin: 0 auto;
-  padding: 20px 0 49px;
+  padding: 20px 0 49px 0;
+
+  @media (min-width: $vp-768) {
+    width: 708px;
+    padding: 45px 0 47px 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    width: 1220px;
+    padding: 45px 0 47px 0;
+  }
 }
 
 .advantages__title {
   margin: 0 0 40px;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 32px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .advantages__list {
   @include list-reset;
+  // counter-reset: advantages;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 58px;
+    row-gap: 37px;
+    counter-reset: advantages;
+  }
+
+  @media (min-width: $vp-1440) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 70px;
+  }
 }
 
 .advantages__item {
+  position: relative;
   padding-left: 80px;
+  // counter-increment: advantages;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  @media (min-width: $vp-768) {
+   width: 250px;
+   min-height: 280px;
+   padding: 114px 0 0 0;
+   counter-increment: advantages;
+  }
+
+  @media (max-width: $vp-767) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: $color-apple;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $vp-768) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--leaf::before {
+    background-image: url(../../img/icons/leaf.svg);
+    background-size: 31px 32px;
+  }
+
+  &--tub::before {
+    background-image: url(../../img/icons/tub.svg);
+    background-size: 31px 32px;
+  }
+
+  &--eat::before {
+    background-image: url(../../img/icons/eat.svg);
+    background-size: 31px 32px;
+  }
+
+  &--clock::before {
+    background-image: url(../../img/icons/clock.svg);
+    background-size: 31px 32px;
+  }
+
+  @media (min-width: $vp-768) {
+    &::after {
+      content: counter(advantages);
+      position: absolute;
+      top: -38px;
+      right: 15px;
+      width: 120px;
+      font-family: $ff-oswald;
+      font-size: 280px;
+      line-height: 280px;
+      font-weight: 400;
+      color: $color-white-smoke;
+      z-index: -1;
+    }
   }
 }
 
 .advantages__description {
   margin: 0;
-  font-family: "Lato", "Arial", sans-serif;
+  font-family: $ff-lato;
   font-size: 14px;
   line-height: 18px;
-  color: $dark-grey;
+  font-weight: 400;
+  color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
