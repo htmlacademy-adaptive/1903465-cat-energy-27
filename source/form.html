@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин "CAT ENERGY"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
-    <header class="main-header">
-      <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу интернет-магазина.">
-        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип интернет-магазина CAT ENERGY.">
-        <img class="main-header__logo-image-2" src="img/logo-mobile-2.svg" width="102" height="18" alt="«Кэт энерджи».">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть/закрыть меню.</span>
+  <body>
+    <div class="container">
+      <header class="main-header no-js">
+        <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу интернет-магазина.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
+            <img class="main-header__logo-image" src="img/svg/logo-mobile.svg" width="33" height="38"
+              alt="Логотип сайта магазина Cat Energy.">
+          </picture>
+          <img class="main-header__logo-image main-header__logo-image--text" src="img/svg/logo-mobile-2.svg" width="102" height="18" alt="«Кэт энерджи».">
+        </a>
+        <button class="main-header__nav-toggle" type="button" aria-label="Открыть/закрыть меню.">
+          <span class="main-header__toggle-line"></span>
         </button>
-        <div class="main-nav__wrappper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная</a>
+        <nav class="main-header__nav">
+          <ul class="main-header__nav-list">
+            <li class="main-header__nav-item">
+              <a class="main-header__nav-link" href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <li class="main-header__nav-item">
+              <a class="main-header__nav-link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__link">Подбор программы</a>
+            <li class="main-header__nav-item">
+              <span class="main-header__nav-link main-header__nav-link--current">Подбор программы</span>
             </li>
           </ul>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
+    </div>
 
     <main class="main">
       <section class="form">
@@ -95,16 +100,20 @@
             <legend class="form__subtitle form__subtitle--decoration">
               <span class="form__subtitle-accent">Контактные данные (владельца кота)</span>
             </legend>
-            <p class="form__field-group form__field-group--email">
-              <label class="form__label">E-mail:*
-                <input class="form__field" type="email" name="form-email" placeholder="kuklachev@gmail.com" required>
-              </label>
-            </p>
-            <p class="form__field-group form__field-group--tel">
-              <label class="form__label">Телефон:*
-                <input class="form__field" type="tel" name="form-tel" placeholder="8 (960) 900-60-90" required>
-              </label>
-            </p>
+            <ul class="form__list">
+              <li class="form__item form__item--email">
+                <label class="form__label">
+                  <span class="form__label-name">E-mail:*</span>
+                  <input class="form__field" type="email" name="form-email" placeholder="kuklachev@gmail.com" required>
+                </label>
+              </li>
+              <li class="form__item form__item--tel">
+                <label class="form__label">
+                  <span class="form__label-name">Телефон:*</span>
+                  <input class="form__field" type="tel" name="form-tel" placeholder="8 (960) 900-60-90" required>
+                </label>
+              </li>
+            </ul>
           </fieldset>
 
           <div class="form__comment">
@@ -152,8 +161,7 @@
 
           <div class="form__submit">
             <button class="form__submit-button button button--accent" type="submit">Отправить заявку</button>
-            <span class="visually-hidden">Отправить заявку.</span>
-            <small class="form__text-required">* - Обязательные поля</small>
+            <span class="form__text-required">* - Обязательные поля</span>
           </div>
 
         </form>
@@ -219,7 +227,6 @@
         </div>
       </div>
     </footer>
-
-
+    <script src="./js/script.js"></script>
   </body>
 </html>
