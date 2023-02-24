@@ -1,11 +1,10 @@
 .advantages__wrapper {
-  // width: 280px;
-  // margin: 0 auto;
+  width: 87%;
   padding: 20px 0 49px 0;
 
   @media (min-width: $vp-768) {
-    width: 708px;
-    padding: 45px 0 47px 0;
+    width: 92%;
+    padding: 16px 0 43px 0;
   }
 
   @media (min-width: $vp-1440) {
@@ -20,7 +19,7 @@
   line-height: 40px;
 
   @media (min-width: $vp-768) {
-    margin: 0 0 32px 0;
+    margin: 0 0 72px 0;
     font-size: 60px;
     line-height: 60px;
   }
@@ -33,8 +32,8 @@
   @media (min-width: $vp-768) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 58px;
-    row-gap: 37px;
+    column-gap: 9%;
+    row-gap: 6%;
     counter-reset: advantages;
   }
 
@@ -45,14 +44,15 @@
 }
 
 .advantages__item {
+  height: 60px;
   position: relative;
   padding-left: 80px;
   // counter-increment: advantages;
 
   @media (min-width: $vp-768) {
-   width: 250px;
+   width: 78%;
    min-height: 280px;
-   padding: 114px 0 0 0;
+   padding: 112px 0 0 0;
    counter-increment: advantages;
   }
 

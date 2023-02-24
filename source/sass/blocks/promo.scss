@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  padding: 27px 10px 0;
+  padding: 27px 0 0 0;
   color: $color-white;
   background-color: $color-apple;
   background-image: linear-gradient($color-apple 302px, $color-white 302px);
@@ -30,14 +30,32 @@
   }
 }
 
-.promo__info-wrapper {
+.promo__wrapper {
   @media (min-width: $vp-768) {
-    padding: 62px 91px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    min-height: 818px;
+  }
+
+  @media (min-width: $vp-1440) {
+    grid-template-columns: 460px 552px;
+    grid-template-rows: 382px 117px;
+  }
+}
+
+.promo__info-wrapper {
+  width: 88%;
+  margin: 0 auto;
+
+  @media (min-width: $vp-768) {
+    padding: 25px 64px 9px 73px;
   }
 }
 
 .promo__title {
   margin: 0 0 25px;
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
@@ -45,7 +63,6 @@
   @media (min-width: $vp-768) {
     width: 436px;
     margin: 0 0 41px;
-    padding: 10px;
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
@@ -64,7 +81,6 @@
   @media (min-width: $vp-768) {
     width: 436px;
     margin: 0 0 10px;
-    // padding: 10px;
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
@@ -74,8 +90,18 @@
 }
 
 .promo__image-wrapper {
+  margin-bottom: 3px;
+
   @media (min-width: $vp-768) {
     position: relative;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    margin: 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
   }
 }
 
@@ -86,21 +112,29 @@
     width: 709px;
     z-index: -1;
   }
+
+  @media (min-width: $vp-1440) {
+    width: 552px;
+    height: 499px;
+    z-index: -1;
+  }
 }
 
 .promo__button {
   width: 280px;
   margin: 0 auto;
+  padding: 12px 12px 10px 12px;
 
   @media (min-width: $vp-768) {
-    position: absolute;
-    content: "";
-    bottom: 526px;
-    left: 106px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    align-self: flex-start;
     width: 244px;
     min-height: 54px;
+    margin: 29px 0 0 121px;
     padding: 14px 26px;
     font-size: 20px;
     line-height: 20px;
+    z-index: 1;
   }
 }
