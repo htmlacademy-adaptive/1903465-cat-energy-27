@@ -1,22 +1,57 @@
 .promo {
-  position: relative;
-  padding: 27px 0 0 0;
-  color: $color-white;
-  background-color: $color-apple;
-  background-image: linear-gradient($color-apple 302px, $color-white 302px);
-  z-index: 0;
+  display: flex;
+  flex-direction: column;
 
-  &::after {
-    position: absolute;
+  @media (min-width: $vp-1024) {
+      position: relative;
+      padding: 0 0 188px 0;
+  }
+}
+
+//   @media (min-width: $vp-768) {
+//     background-color: transparent;
+//     background-image: none;
+//   }
+// }
+
+// .promo__wrapper {
+//   @media (min-width: $vp-768) {
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     width: 100%;
+//     min-height: 818px;
+//   }
+
+//   @media (min-width: $vp-1440) {
+//     grid-template-columns: 460px 552px;
+//     grid-template-rows: 382px 117px;
+//   }
+// }
+
+.promo__info-wrapper {
+  position: relative;
+  order: -1;
+  width: 100%;
+  padding: 27px 0 164px 0;
+  color: $color-white;
+  z-index: 1;
+
+  @media (min-width: $vp-768) {
+    padding: 52px 204px 38px 88px;
+  }
+
+  &::before {
     content: "";
-    width: 100%;
-    height: 302px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 100vw;
+    min-width: 320px;
+    height: 100%;
     background-image: url("../img/index-background-mobile.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.15;
-    top: 0;
-    left: 0;
+    background-position: 50% 50%;
+    background-size: cover;
     z-index: -1;
 
     @media (min-width: $vp-768) {
@@ -24,32 +59,20 @@
     }
   }
 
-  @media (min-width: $vp-768) {
-    background-color: transparent;
-    background-image: none;
-  }
-}
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 100vw;
+    min-width: 320px;
+    height: 100%;
+    background-color: rgba($color-apple, 0.85);
+    z-index: -1;
 
-.promo__wrapper {
-  @media (min-width: $vp-768) {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    min-height: 818px;
-  }
-
-  @media (min-width: $vp-1440) {
-    grid-template-columns: 460px 552px;
-    grid-template-rows: 382px 117px;
-  }
-}
-
-.promo__info-wrapper {
-  width: 88%;
-  margin: 0 auto;
-
-  @media (min-width: $vp-768) {
-    padding: 25px 64px 9px 73px;
+    @media (min-width: $vp-768) {
+      display: none;
+    }
   }
 }
 
@@ -61,7 +84,7 @@
   text-align: center;
 
   @media (min-width: $vp-768) {
-    width: 436px;
+    max-width: 436px;
     margin: 0 0 41px;
     font-size: 60px;
     line-height: 60px;
@@ -89,27 +112,15 @@
   }
 }
 
-.promo__image-wrapper {
-  margin-bottom: 3px;
-
-  @media (min-width: $vp-768) {
-    position: relative;
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-    margin: 0;
-  }
-
-  @media (min-width: $vp-1440) {
-    grid-column: 2 / -1;
-    grid-row: 1 / -1;
-  }
-}
-
 .promo__image {
-  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: -135px auto 3px;
 
   @media (min-width: $vp-768) {
     width: 709px;
+    margin: -83px auto 0 auto;
     z-index: -1;
   }
 
@@ -121,20 +132,17 @@
 }
 
 .promo__button {
-  width: 280px;
-  margin: 0 auto;
+  order: 1;
+  width: 100%;
   padding: 12px 12px 10px 12px;
 
   @media (min-width: $vp-768) {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-    align-self: flex-start;
+    order: 0;
     width: 244px;
     min-height: 54px;
-    margin: 29px 0 0 121px;
-    padding: 14px 26px;
+    margin: 0 auto 0 91px;
+    padding: 16px 26px;
     font-size: 20px;
     line-height: 20px;
-    z-index: 1;
   }
 }
