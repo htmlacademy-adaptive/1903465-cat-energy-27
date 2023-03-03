@@ -3,27 +3,54 @@
   padding: 25px 0 36px;
   font-size: 24px;
   font-weight: 400;
+
+  @media (min-width: $vp-768) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.subcatalog__column-wrapper {
+  @media (min-width: $vp-1024) {
+    display: grid;
+    grid-template-columns: auto 245px;
+    gap: 6%;
+    margin-bottom: 86px;
+  }
 }
 
 .subcatalog__list {
   @include list-reset;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 0;
+  }
 }
 
 .subcatalog__item {
-  width: 280px;
   margin: 0 auto;
-  padding: 13px 0 19px;
+  padding: 13px 0 17px 0;
   border-top: 1px solid $color-very-light-grey;
 
   &:last-child {
     border-bottom: 1px solid $color-very-light-grey;
   }
+
+  @media (min-width: $vp-768) {
+    padding: 26px 38px 28px 38px;
+  }
+
+  @media (min-width: $vp-1024) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 244px;
+    gap: 15px;
+    padding: 15px 0 16px 0;
+  }
 }
 
 .subcatalog__wrapper {
   position: relative;
-  width: 280px;
   min-height: 290px;
   margin: 0 auto 35px;
   padding: 59px 0 43px;
@@ -34,16 +61,55 @@
   color: $color-white;
   z-index: -1;
 
+  @media (min-width: $vp-1024) {
+    margin-bottom: 0;
+  }
+
   &::before {
     position: absolute;
     content: "";
-    width: 280px;
-    min-height: 290px;
+    width: 100%;
+    height: 100%;
     background-color: rgba(104, 183, 56, 0.85);
     top: 0;
     left: 0;
     margin: auto;
     z-index: -1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/svg/gift.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: $vp-768) {
+      top: 57px;
+      left: 11%;
+      width: 80px;
+      height: 83px;
+      transform: none;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    min-height: 200px;
+    padding: 71px 18% 69px 59%;
+    background-image: url("../../img/catalog/gift-tablet.jpg");
+  }
+
+  @media (min-width: $vp-768) {
+    width: 245px;
+    // margin-top: 104px;
+    padding: 185px 43px 42px 41px;
+    background-image: url("../../img/catalog/gift-desktop.jpg");
   }
 }
 
@@ -56,4 +122,8 @@
   line-height: 20px;
   font-weight: 400;
   text-align: center;
+
+  @media (min-width: $vp-768) {
+    padding: 0;
+  }
 }

@@ -1,7 +1,16 @@
+.features__list {
+  margin: 0;
+}
+
 .features__item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 6px;
+
+
+  @media (min-width: $vp-768) {
+    padding: 8px 0 8px 0;
+    border-bottom: 1px solid $color-very-light-grey;
+  }
 }
 
 .features__text {
@@ -10,4 +19,8 @@
   font-size: 12px;
   line-height: 16px;
   color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    font-size: 16px;
+  }
 }
