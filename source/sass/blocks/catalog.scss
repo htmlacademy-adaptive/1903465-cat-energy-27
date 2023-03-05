@@ -1,11 +1,13 @@
 .catalog {
+  margin-bottom: 25px;
+
   @media (max-width: $vp-767) {
     border-top: 1px solid $color-gainsboro;
     border-bottom: 1px solid $color-gainsboro;
   }
 
   @media (min-width: $vp-768) {
-    margin-bottom: 30px;
+    margin-bottom: 72px;
   }
 }
 
@@ -107,6 +109,10 @@
       padding: 151px 50px 39px 50px;
       border: 2px solid $color-white-smoke;
       background-color: $color-white;
+    }
+
+    @media (min-width: $vp-1024) {
+      padding: 151px 10% 39px 10%;
     }
   }
 }

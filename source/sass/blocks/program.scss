@@ -1,24 +1,17 @@
-.program__wrapper {
-  // width: 280px;
-  width: 88%;
-  margin: 0 auto;
-
-  @media (min-width: $vp-768) {
-    width: 708px;
-  }
-
-  @media (min-width: $vp-1440) {
-    width: 1220px;
+.program {
+  @media (min-width: $vp-1024) {
+    margin-bottom: 71px;
   }
 }
 
 .program__list {
   @include list-reset;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
+    row-gap: 40px;
   }
 }
 
@@ -32,6 +25,10 @@
 
     @media (min-width: $vp-768) {
       margin-bottom: 30px;
+    }
+
+    @media (min-width: $vp-1024) {
+      margin-bottom: 0;
     }
   }
 
@@ -50,7 +47,7 @@
       right: 62px;
     }
 
-    @media (min-width: $vp-1440) {
+    @media (min-width: $vp-1024) {
       width: 100px;
       height: 100px;
       top: 41px;
@@ -66,7 +63,7 @@
     left: 29px;
     width: 37px;
     height: 50px;
-    background-image: url("../../img/svg/cat-slim.svg");
+    background-image: url("../img/svg/cat-slim.svg");
     background-size: 37px 50px;
     background-repeat: no-repeat;
 
@@ -79,7 +76,7 @@
       background-size: 140px 194px;
     }
 
-    @media (min-width: $vp-1440) {
+    @media (min-width: $vp-1024) {
       top: 41px;
       right: auto;
       left: 67px;
@@ -96,7 +93,7 @@
     left: 14px;
     width: 68px;
     height: 29px;
-    background-image: url("../../img/svg/cat-pro.svg");
+    background-image: url("../img/svg/cat-pro.svg");
     background-size: 68px 29px;
     background-repeat: no-repeat;
 
@@ -109,7 +106,7 @@
       background-size: 269px 113px;
     }
 
-    @media (min-width: $vp-1440) {
+    @media (min-width: $vp-1024) {
       top: 67px;
       right: auto;
       left: 33px;
@@ -120,14 +117,17 @@
   }
 
   @media (min-width: $vp-768) {
-    width: 708px;
+    max-width: 708px;
     padding: 71px 316px 54px 53px;
     margin-bottom: 30px;
   }
 
-  @media (min-width: $vp-1440) {
-    width: 570px;
-    padding: 77px 61px 55px 52px;
+  @media (min-width: $vp-1024) {
+    display: flex;
+    flex-direction: column;
+    max-width: 570px;
+    padding: 77px 5% 55px 9%;
+    margin-bottom: 0;
   }
 }
 
@@ -141,19 +141,19 @@
 
   @media (min-width: $vp-768) {
     margin: 0 0 24px 0;
-    padding-left: 0;
+    padding: 0;
     font-size: 36px;
     line-height: 36px;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     margin: 0 0 73px 0;
-   padding-left: 162px;
+    padding-left: calc(100px + 13%);
   }
 }
 
 .program__description {
-  margin: 0;
+  margin: 0 0 15px 0;
   padding-bottom: 23px;
   font-family: $ff-lato;
   font-size: 14px;
@@ -165,22 +165,82 @@
   }
 
   @media (min-width: $vp-768) {
-   font-size: 16px;
-   line-height: 24px;
-   color: $color-black;
+    margin-bottom: 48px;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-black;
   }
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 23px;
+   }
 }
 
 .program__link {
-  display: inline-block;
-  padding: 18px 56px 4px 0;
+  position: relative;
+  display: inline-flex;
+  padding-right: 57px;
   line-height: 16px;
   color: $color-black;
   text-transform: uppercase;
 
   @media (min-width: $vp-768) {
-  padding-top: 29px;
    font-size: 20px;
    line-height: 30px;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin: auto auto 0 0;
+   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 18px;
+
+    width: 18px;
+    height: 2px;
+
+    background-color: $color-black;
+    transform: translateY(-50%);
+
+    transition: all 0.3s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 11px;
+
+    width: 0;
+    height: 0;
+
+    border-width: 5px 0 5px 7px;
+    border-style: solid;
+    border-color: transparent
+      transparent
+      transparent
+      $color-black;
+    transform: translateY(-50%);
+
+    transition: all 0.3s;
+  }
+
+  &:hover::before {
+    right: 10px;
+
+    width: 26px;
+  }
+
+  &:hover::after {
+    right: 3px;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
   }
 }

@@ -1,27 +1,16 @@
 .main-header {
   position: relative;
-
   display: flex;
-  // width: 88%;
-  margin: 0 auto;
   min-height: 65px;
+  padding-top: 14px;
 
   @media (min-width: $vp-768) {
-    justify-content: center;
-    align-items: flex-start;
-    // width: auto;
-    padding-top: 0;
-    padding-bottom: 10px;
+    width: auto;
+    padding: 0 0 10px 0;
   }
 
   @media (min-width: $vp-1024) {
-    justify-content: space-between;
-    width: 1220px;
-    margin: 0 auto;
-    padding-top: 53px;
-    padding-bottom: 32px;
-    // padding-top: 0;
-    // padding-bottom: 10px;
+    padding: 53px 0 26px 0;
   }
 
   &.no-js {
@@ -63,7 +52,7 @@
     height: 52px;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     width: 202px;
     height: 59px;
   }
@@ -159,14 +148,14 @@
 
 .main-header__nav {
   @media (min-width: $vp-768) {
-    display: flex;
-    width: 440px;
+    display: flex;    ;
     margin-left: auto;
-    // width: 59%;
+    padding-top: 8px;
   }
 
   @media (min-width: $vp-1024) {
     width: 50%;
+    padding: 6px 0 0 15px;
   }
 }
 
@@ -175,7 +164,6 @@
   top: 65px;
   left: -20px;
   z-index: 3;
-
   display: none;
   width: calc(100% + 40px);
   @include list-reset;
@@ -200,16 +188,20 @@
     background-color: transparent;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
+    min-width: 477px;
     margin-left: auto;
-
     font-size: 20px;
     line-height: 30px;
+    column-gap: 7%;
+
+    &--index {
+      color: $color-white;
+    }
   }
 
   .no-js & {
     position: static;
-
     display: block;
     width: 100%;
 
@@ -223,9 +215,14 @@
 
     @media (min-width: $vp-768) {
       position: static;
-
       display: grid;
     }
+  }
+}
+
+.main-header__nav-list--index .main-header__nav-link--current {
+  @media (min-width: $vp-1024) {
+    border-color: $color-white;
   }
 }
 
@@ -257,17 +254,13 @@
     padding: 18px 0 8px 0;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     padding: 18px 0 5px 0;
   }
 
   &--current {
     @media (min-width: $vp-768) {
       border-bottom: 2px solid $color-apple;
-    }
-
-    @media (min-width: $vp-1440) {
-      border-color: $color-white;
     }
   }
 

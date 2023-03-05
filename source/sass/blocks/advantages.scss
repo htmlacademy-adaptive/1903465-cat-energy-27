@@ -1,15 +1,14 @@
-.advantages__wrapper {
-  width: 87%;
-  padding: 20px 0 49px 0;
+.advantages {
+  max-width: 470px;
+  margin-bottom: 49px;
 
   @media (min-width: $vp-768) {
-    width: 92%;
-    padding: 16px 0 43px 0;
+    max-width: 1300px;
+    margin-bottom: 43px;
   }
 
-  @media (min-width: $vp-1440) {
-    width: 1220px;
-    padding: 45px 0 47px 0;
+  @media (min-width: $vp-1024) {
+    margin-bottom: 82px;
   }
 }
 
@@ -23,36 +22,41 @@
     font-size: 60px;
     line-height: 60px;
   }
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 74px;
+  }
 }
 
 .advantages__list {
   @include list-reset;
-  // counter-reset: advantages;
 
   @media (min-width: $vp-768) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 284px 324px;
     column-gap: 9%;
     row-gap: 6%;
+    padding-bottom: 60px;
     counter-reset: advantages;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 70px;
+    column-gap: calc(6% + 6px);
+    row-gap: 40px;
+    padding-bottom: 0;
   }
 }
 
 .advantages__item {
-  height: 60px;
+  min-height: 60px;
   position: relative;
   padding-left: 80px;
-  // counter-increment: advantages;
+
 
   @media (min-width: $vp-768) {
-   width: 78%;
-   min-height: 280px;
-   padding: 112px 0 0 0;
+   height: 100%;
+   padding: 109px 60px 44px 0;
    counter-increment: advantages;
   }
 
@@ -80,22 +84,22 @@
   }
 
   &--leaf::before {
-    background-image: url(../../img/icons/leaf.svg);
+    background-image: url(../img/svg/leaf.svg);
     background-size: 31px 32px;
   }
 
   &--tub::before {
-    background-image: url(../../img/icons/tub.svg);
+    background-image: url(../img/svg/tub.svg);
     background-size: 31px 32px;
   }
 
   &--eat::before {
-    background-image: url(../../img/icons/eat.svg);
+    background-image: url(../img/svg/eat.svg);
     background-size: 31px 32px;
   }
 
   &--clock::before {
-    background-image: url(../../img/icons/clock.svg);
+    background-image: url(../img/svg/clock.svg);
     background-size: 31px 32px;
   }
 
@@ -103,12 +107,12 @@
     &::after {
       content: counter(advantages);
       position: absolute;
-      top: -38px;
+      top: -2px;
       right: 15px;
       width: 120px;
       font-family: $ff-oswald;
       font-size: 280px;
-      line-height: 280px;
+      line-height: 203px;
       font-weight: 400;
       color: $color-white-smoke;
       z-index: -1;

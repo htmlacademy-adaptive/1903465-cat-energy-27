@@ -103,7 +103,14 @@
     margin-bottom: 8px;
 
     @media (min-width: $vp-768) {
-      margin-bottom: 23px;
+      width: 159px;
+      margin: 0 auto 23px auto;
+    }
+
+    @media (min-width: $vp-1024) {
+      width: auto;
+      max-width: 159px;
+      margin: 0 auto 23px auto;
     }
   }
 }
@@ -160,6 +167,7 @@
   text-transform: uppercase;
 
   @media (min-width: $vp-768) {
+    margin: 0;
     font-size: 20px;
     line-height: 20px;
   }
@@ -173,6 +181,10 @@
   font-size: 14px;
   line-height: 14px;
   color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+  }
 }
 
 .card__package {

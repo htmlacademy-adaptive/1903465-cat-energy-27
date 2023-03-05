@@ -64,6 +64,7 @@
   & .form__fieldset {
     @media (min-width: $vp-1024) {
       margin-bottom: 0;
+      align-self: start;
     }
   }
 }
@@ -131,6 +132,14 @@
     }
   }
 
+  &--comment {
+    margin: 0 0 24px 0;
+
+    @media (min-width: $vp-768) {
+      margin: 0 0 65px 0;
+    }
+  }
+
   &--additional {
     @media (min-width: $vp-768) {
       margin-bottom: 32px;
@@ -142,13 +151,13 @@
   }
 }
 
-.form__comment {
-  margin: 0 0 24px 0;
+// .form__comment {
+//   margin: 0 0 24px 0;
 
-  @media (min-width: $vp-768) {
-    margin: 0 0 65px 0;
-  }
-}
+//   @media (min-width: $vp-768) {
+//     margin: 0 0 65px 0;
+//   }
+// }
 
 .form__list {
   @include list-reset;
@@ -382,7 +391,7 @@
     transform: translate(-50%, -50%);
     width: 30px;
     height: 30px;
-    background-image: url("../../img/svg/checkbox.svg");
+    background-image: url("../img/svg/checkbox.svg");
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0;
@@ -433,6 +442,7 @@
 }
 
 .form__subtitle {
+  @include legend-reset;
   display: block;
   margin-bottom: 35px;
   padding: 0;
@@ -464,6 +474,61 @@
     @media (min-width: $vp-1024) {
       margin-bottom: 61px;
     }
+  }
+
+  &--decoration {
+    position: relative;
+    display: inline-flex;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 34%;
+      left: 0;
+      width: calc(100% + 18px);
+      background-color: $color-white;
+      z-index: -1;
+
+      @media (min-width: $vp-768) {
+        top: 23px;
+        left: -40px;
+        width: calc(100% + 80px);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 17px;
+      left: 0;
+      z-index: -2;
+      width: calc(100vw - 20px);
+      min-width: calc($vp-320 - 20px);
+      height: 2px;
+      background-color: $color-apple;
+      transform: translateY(-50%);
+
+      @media (min-width: $vp-768) {
+        left: -100vw;
+        top: 23px;
+        width: 200vw;
+      }
+    }
+  }
+}
+
+.form__subtitle-inner {
+  display: block;
+  max-width: 202px;
+  padding-right: 20px;
+  background-color: $color-white;
+
+  @media (min-width: $vp-768) {
+    max-width: 97%;
+    width: auto;
+    padding: 0 42px 0 39px;
+    transform: translateX(-40px);
   }
 }
 
