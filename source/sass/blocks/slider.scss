@@ -57,7 +57,7 @@
   }
 
   @media (min-width: $vp-768) {
-    left: 46%;
+    left: 47%;
   }
 }
 
@@ -72,6 +72,10 @@
   background-color: $color-dim-gray;
   border-radius: 2px;
   transform: translateX(-50%);
+
+  @media (min-width: $vp-768) {
+    left: 45%;
+  }
 }
 
 .slider__button-image {

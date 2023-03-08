@@ -43,7 +43,6 @@
   max-width: 500px;
   margin: 0 auto;
   padding: 26px 0 26px 0;
-  // background-color: $color-white-smoke;
 
   @media (min-width: $vp-768) {
     max-width: 1220px;
@@ -68,19 +67,18 @@
 }
 
 .contacts__address {
-  max-width: 140x;
+  max-width: 140px;
   margin: 0;
-  // line-height: 20px;
   font-style: normal;
 
   @media (min-width: $vp-768) {
     max-width: 157px;
-    text-align: ri;
+    text-align: right;
   }
 
-  // @media (min-width: $vp-1024) {
-  //   text-align: left;
-  // }
+  @media (min-width: $vp-1024) {
+    text-align: left;
+  }
 }
 
 .contacts__title {
@@ -112,7 +110,6 @@
   @media (min-width: $vp-768) {
     max-width: 157px;
     font-size: 16px;
-    text-align: right;
   }
 }
 

@@ -4,11 +4,12 @@
 
   @media (min-width: $vp-768) {
     max-width: 1300px;
-    margin-bottom: 43px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: $vp-1024) {
-    margin-bottom: 82px;
+    padding-top: 31px;
+    margin-bottom: 83px;
   }
 }
 
@@ -34,8 +35,8 @@
   @media (min-width: $vp-768) {
     display: grid;
     grid-template-columns: 284px 324px;
-    column-gap: 9%;
-    row-gap: 6%;
+    column-gap: 14%;
+    row-gap: 37%;
     padding-bottom: 60px;
     counter-reset: advantages;
   }
@@ -58,6 +59,10 @@
    height: 100%;
    padding: 109px 60px 44px 0;
    counter-increment: advantages;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 109px 4px 44px 0;
   }
 
   @media (max-width: $vp-767) {
@@ -108,7 +113,7 @@
       content: counter(advantages);
       position: absolute;
       top: -2px;
-      right: 15px;
+      left: 117px;
       width: 120px;
       font-family: $ff-oswald;
       font-size: 280px;
