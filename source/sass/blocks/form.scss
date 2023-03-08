@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $vp-1024) {
-    padding-top: 44px;
+    padding-top: 48px;
     padding-bottom: 81px;
   }
 }
@@ -24,6 +24,10 @@
     font-size: 60px;
     line-height: 60px;
     margin: 0 auto 54px auto;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 56px;
   }
 }
 
@@ -120,7 +124,7 @@
   }
 
   &--owner {
-    // padding: 26px 0 12px;
+    margin-bottom: 20px;
     color: $color-charcoal;
 
     @media (min-width: $vp-768) {
@@ -138,6 +142,10 @@
     @media (min-width: $vp-768) {
       margin: 0 0 65px 0;
     }
+
+    @media (min-width: $vp-768) {
+      margin: 0 0 67px 0;
+    }
   }
 
   &--additional {
@@ -146,18 +154,10 @@
     }
 
     @media (min-width: $vp-1024) {
-      margin-bottom: 60px;
+      margin-bottom: 41px;
     }
   }
 }
-
-// .form__comment {
-//   margin: 0 0 24px 0;
-
-//   @media (min-width: $vp-768) {
-//     margin: 0 0 65px 0;
-//   }
-// }
 
 .form__list {
   @include list-reset;
@@ -172,7 +172,7 @@
 
     @media (min-width: $vp-1024) {
       grid-template-columns: repeat(4, 1fr);
-      column-gap: 6%;
+      column-gap: calc(6% + 7px);
       row-gap: 40px;
     }
   }
@@ -193,10 +193,6 @@
   @media (min-width: $vp-768) {
     margin-bottom: 20px;
   }
-
-  .form__list--column & {
-    margin-bottom: 0;
-  }
 }
 
 .form__item--radio:not(:last-child) {
@@ -209,12 +205,10 @@
   position: relative;
   display: flex;
   align-items: center;
-  // margin: 0 0 14px 0;
 
   &--radio {
     position: relative;
     min-height: 30px;
-    // padding-top: 10px;
     padding-left: 45px;
     cursor: pointer;
 
@@ -327,6 +321,10 @@
   transform: translateY(-50%);
   color: $color-black;
   pointer-events: none;
+
+  @media (min-width: $vp-1024) {
+    right: 21px;
+  }
 }
 
 .form__field:active + .form__field-icon,
@@ -421,6 +419,7 @@
   padding: 10px 12px 10px 15px;
   border: 1px solid $color-whisper-4;
   resize: none;
+  transform: translateY(2px);
 
   @media (min-width: $vp-768) {
     min-height: 174px;
@@ -444,7 +443,7 @@
 .form__subtitle {
   @include legend-reset;
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
   padding: 0;
   font-size: 24px;
   line-height: 26px;
@@ -469,10 +468,6 @@
   &--second {
     @media (min-width: $vp-768) {
       margin-bottom: 57px;
-    }
-
-    @media (min-width: $vp-1024) {
-      margin-bottom: 61px;
     }
   }
 
@@ -500,7 +495,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 17px;
+      top: 18px;
       left: 0;
       z-index: -2;
       width: calc(100vw - 20px);

@@ -2,39 +2,12 @@
   position: relative;
 }
 
-// .main-nav__toggle {
-//   width: 44px;
-//   height: 36px;
-//   // padding: 30px;
-//   border: none;
-//   background-color: transparent;
-//   cursor: pointer;
-
-//   &:hover {
-//     opacity: 0.8;
-//   }
-
-//   &:active {
-//     opacity: 0.6;
-//   }
-
-//   &:focus {
-//     border-color: $color-charcoal;
-//   }
-
-//   @media (min-width: $vp-768) {
-//     display: none;
-//   }
-// }
-
 .main-nav__list {
   @include list-reset;
   width: 100%;
 
   @media (min-width: $vp-768) {
     display: flex;
-    // width: 706px;
-    // min-height: 54px;
   }
 }
 

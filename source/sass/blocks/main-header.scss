@@ -186,7 +186,7 @@
   }
 
   @media (min-width: $vp-1024) {
-    min-width: 477px;
+    min-width: 479px;
     margin-left: auto;
     font-size: 20px;
     line-height: 30px;
@@ -221,6 +221,17 @@
   @media (min-width: $vp-1024) {
     border-color: $color-white;
     transform: translateX(-3px);
+  }
+}
+
+.main-header__nav-list--catalog .main-header__nav-link--current {
+  @media (min-width: $vp-768) {
+    transform: translateX(-4px);
+    padding-bottom: 4px;
+  }
+
+  @media (min-width: $vp-1024) {
+    transform: translateX(2px);
   }
 }
 

@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $vp-768) {
-    margin-bottom: 72px;
+    margin-bottom: 77px;
   }
 }
 
@@ -55,7 +55,7 @@
 
   @media (min-width: $vp-1024) {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 6%;
+    column-gap: calc(6% + 6px);
     row-gap: 63px;
   }
 }
@@ -97,7 +97,7 @@
   }
 
   @media (min-width: $vp-1024) {
-    padding: 1px 30px 40px 35px;
+    padding: 1px 15% 40px 16%;
   }
 
   &--more {
@@ -106,13 +106,13 @@
 
     @media (min-width: $vp-768) {
       margin-top: 81px;
-      padding: 151px 50px 39px 50px;
+      padding: 161px 39px 36px 39px;
       border: 2px solid $color-white-smoke;
       background-color: $color-white;
     }
 
     @media (min-width: $vp-1024) {
-      padding: 151px 10% 39px 10%;
+      padding: 156px 10% 39px 10%;
     }
   }
 }

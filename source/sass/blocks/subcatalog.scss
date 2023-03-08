@@ -7,6 +7,10 @@
   }
 
   @media (min-width: $vp-1024) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: calc(6% + 6px);
+    row-gap: 79px;
     margin-bottom: 86px;
    }
 }
@@ -21,7 +25,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 15px;
     left: 0;
     width: calc(100vw - 20px);
     min-width: 300px;
@@ -30,20 +34,26 @@
     z-index: -1;
 
     @media (min-width: $vp-768) {
+      top: 21px;
       left: -100vw;
       width: 200vw;
     }
   }
 
   @media (min-width: $vp-768) {
-    margin: 0 0 85px 0;
+    margin: 0 0 79px 0;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: $vp-768) {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
   }
 }
 
 .subcatalog__title-inner {
-  padding-right: 20px;
+  padding-right: 22px;
   background-color: $color-white;
 
   @media (min-width: $vp-768) {
@@ -57,20 +67,16 @@
   }
 }
 
-.subcatalog__column-wrapper {
-  @media (min-width: $vp-1024) {
-    display: grid;
-    grid-template-columns: auto 245px;
-    gap: 6%;
-    margin-bottom: 86px;
-  }
-}
-
 .subcatalog__list {
   @include list-reset;
   margin-bottom: 37px;
 
+  @media (min-width: $vp-768) {
+    margin-bottom: 68px;
+   }
+
   @media (min-width: $vp-1024) {
+    grid-column: 1 / 4;
     margin-bottom: 0;
   }
 }
@@ -85,7 +91,10 @@
   }
 
   @media (min-width: $vp-768) {
-    padding: 26px 38px 28px 38px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 26px 41px 28px 38px;
   }
 
   @media (min-width: $vp-1024) {
@@ -151,13 +160,12 @@
 
   @media (min-width: $vp-768) {
     min-height: 200px;
-    padding: 71px 18% 69px 59%;
+    padding: 71px 17% 69px 60%;
     background-image: url("../img/catalog/gift-tablet.jpg");
   }
 
   @media (min-width: $vp-1024) {
     width: 245px;
-    // margin-top: 104px;
     padding: 185px 43px 42px 41px;
     background-image: url("../img/catalog/gift-desktop.jpg");
   }
@@ -175,5 +183,10 @@
 
   @media (min-width: $vp-768) {
     padding: 0;
+    text-align: left;
+  }
+
+  @media (min-width: $vp-768) {
+    text-align: center;
   }
 }

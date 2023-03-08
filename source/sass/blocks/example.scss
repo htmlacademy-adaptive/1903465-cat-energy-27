@@ -140,11 +140,6 @@
   flex-direction: column;
   align-items: center;
   max-width: 162px;
-
-
-  @media (min-width: $vp-768) {
-    // padding: 0;
-  }
 }
 
 .example__number {
@@ -160,7 +155,6 @@
   border-radius: 3px;
 
   @media (min-width: $vp-768) {
-    // padding: 15px 4% 16px 4%;
     padding: 15px 14px 18px 14px;
     font-size: 30px;
     line-height: 37px;
@@ -207,12 +201,9 @@
     display: flex;
     flex-direction: column;
     min-width: 176px;
-    // margin-left: auto;
     padding-top: 11px;
-    // text-align: right;
     font-size: 20px;
     text-align: end;
-    // transform: translateX(16px);
 
     @media (min-width: $vp-1024) {
       flex-direction: row;
