@@ -1,0 +1,43 @@
+.features__list {
+  margin: 0;
+}
+
+.features__item {
+  display: flex;
+  justify-content: space-between;
+
+
+  @media (min-width: $vp-768) {
+    padding: 8px 0 8px 0;
+    border-bottom: 1px solid $color-very-light-grey;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 8px 0 7px 0;
+  }
+}
+
+.features__text {
+  margin: 0;
+  font-family: $ff-lato;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $vp-1024) {
+    width: 50%;
+    padding-right: 10px;
+  }
+
+  &--second {
+    @media (min-width: $vp-1024) {
+      width: 50%;
+      padding-right: 0;
+      text-align: end;
+    }
+  }
+}

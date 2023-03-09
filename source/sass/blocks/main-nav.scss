@@ -1,0 +1,38 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__list {
+  @include list-reset;
+  width: 100%;
+
+  @media (min-width: $vp-768) {
+    display: flex;
+  }
+}
+
+.main-nav__wrappper {
+  background-color: $color-white;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 22px 20px 24px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $color-black;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: $vp-767) {
+    border-top: 1px solid $color-whisper;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 18px 0 12px 36px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}

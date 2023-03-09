@@ -1,0 +1,140 @@
+.advantages {
+  max-width: 470px;
+  margin-bottom: 49px;
+
+  @media (min-width: $vp-768) {
+    max-width: 1300px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding-top: 31px;
+    margin-bottom: 83px;
+  }
+}
+
+.advantages__title {
+  margin: 0 0 40px;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 72px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 74px;
+  }
+}
+
+.advantages__list {
+  @include list-reset;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-template-columns: 284px 324px;
+    column-gap: 14%;
+    row-gap: 37%;
+    padding-bottom: 60px;
+    counter-reset: advantages;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: calc(6% + 6px);
+    row-gap: 40px;
+    padding-bottom: 0;
+  }
+}
+
+.advantages__item {
+  min-height: 60px;
+  position: relative;
+  padding-left: 80px;
+
+
+  @media (min-width: $vp-768) {
+   height: 100%;
+   padding: 109px 60px 44px 0;
+   counter-increment: advantages;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 109px 4px 44px 0;
+  }
+
+  @media (max-width: $vp-767) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: $color-apple;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $vp-768) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--leaf::before {
+    background-image: url(../img/svg/leaf.svg);
+    background-size: 31px 32px;
+  }
+
+  &--tub::before {
+    background-image: url(../img/svg/tub.svg);
+    background-size: 31px 32px;
+  }
+
+  &--eat::before {
+    background-image: url(../img/svg/eat.svg);
+    background-size: 31px 32px;
+  }
+
+  &--clock::before {
+    background-image: url(../img/svg/clock.svg);
+    background-size: 31px 32px;
+  }
+
+  @media (min-width: $vp-768) {
+    &::after {
+      content: counter(advantages);
+      position: absolute;
+      top: -2px;
+      left: 117px;
+      width: 120px;
+      font-family: $ff-oswald;
+      font-size: 280px;
+      line-height: 203px;
+      font-weight: 400;
+      color: $color-white-smoke;
+      z-index: -1;
+    }
+  }
+}
+
+.advantages__description {
+  margin: 0;
+  font-family: $ff-lato;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

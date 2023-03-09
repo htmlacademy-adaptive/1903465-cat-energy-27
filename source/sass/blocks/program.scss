@@ -1,0 +1,253 @@
+.program {
+  margin-bottom: 18px;
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 71px;
+  }
+}
+
+.program__list {
+  @include list-reset;
+
+  @media (min-width: $vp-1024) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+    row-gap: 40px;
+  }
+}
+
+.program__item {
+  position: relative;
+  padding: 25px 20px 18px 22px;
+  background-color: $color-white-smoke;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $vp-1024) {
+      margin-bottom: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $color-apple;
+    border-radius: 50%;
+
+    @media (min-width: $vp-768) {
+      width: 200px;
+      height: 200px;
+      top: 91px;
+      right: 62px;
+    }
+
+    @media (min-width: $vp-1024) {
+      width: 100px;
+      height: 100px;
+      top: 46px;
+      right: auto;
+      left: 52px;
+    }
+  }
+
+  &--slim::after {
+    position: absolute;
+    content: "";
+    top: 21px;
+    left: 29px;
+    width: 37px;
+    height: 50px;
+    background-image: url("../img/svg/cat-slim.svg");
+    background-size: 37px 50px;
+    background-repeat: no-repeat;
+
+    @media (min-width: $vp-768) {
+      top: 80px;
+      left: auto;
+      right: 93px;
+      width: 140px;
+      height: 194px;
+      background-size: 140px 194px;
+    }
+
+    @media (min-width: $vp-1024) {
+      top: 41px;
+      right: auto;
+      left: 67px;
+      width: 70px;
+      height: 97px;
+      background-size: 70px 97px;
+    }
+  }
+
+  &--pro::after {
+    position: absolute;
+    content: "";
+    top: 36px;
+    left: 14px;
+    width: 68px;
+    height: 29px;
+    background-image: url("../img/svg/cat-pro.svg");
+    background-size: 68px 29px;
+    background-repeat: no-repeat;
+
+    @media (min-width: $vp-768) {
+      top: 135px;
+      left: auto;
+      right: 27px;
+      width: 269px;
+      height: 113px;
+      background-size: 269px 113px;
+    }
+
+    @media (min-width: $vp-1024) {
+      top: 67px;
+      right: auto;
+      left: 33px;
+      width: 135px;
+      height: 57px;
+      background-size: 135px 57px;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    max-width: 708px;
+    padding: 78px 316px 57px 53px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $vp-1024) {
+    display: flex;
+    flex-direction: column;
+    max-width: 570px;
+    padding: 77px 5% 55px 9%;
+    margin-bottom: 0;
+  }
+}
+
+.program__subtitle {
+  margin: 0 0 29px;
+  padding: 5px 0 0 69px;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 24px 0;
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin: 0 0 73px 0;
+    padding-left: calc(100px + 13%);
+  }
+}
+
+.program__description {
+  margin: 0 0 15px 0;
+  padding-bottom: 23px;
+  font-family: $ff-lato;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-charcoal;
+
+  @media (max-width: $vp-767) {
+    border-bottom: 1px solid $color-gainsboro;
+  }
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 52px;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-black;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 26px;
+   }
+}
+
+.program__link {
+  position: relative;
+  display: inline-flex;
+  padding-right: 50px;
+  line-height: 16px;
+  color: $color-black;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    padding-right: 61px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin: auto auto 0 0;
+   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 18px;
+
+    width: 18px;
+    height: 2px;
+
+    background-color: $color-black;
+    transform: translateY(-50%);
+
+    transition: all 0.3s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 11px;
+
+    width: 0;
+    height: 0;
+
+    border-width: 5px 0 5px 7px;
+    border-style: solid;
+    border-color: transparent
+      transparent
+      transparent
+      $color-black;
+    transform: translateY(-50%);
+
+    transition: all 0.3s;
+  }
+
+  &:hover::before {
+    right: 10px;
+
+    width: 26px;
+  }
+
+  &:hover::after {
+    right: 3px;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+}
