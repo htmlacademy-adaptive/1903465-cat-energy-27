@@ -89,22 +89,22 @@
   }
 
   &--leaf::before {
-    background-image: url(../img/svg/leaf.svg);
+    background-image: url("../img/svg/leaf.svg");
     background-size: 31px 32px;
   }
 
   &--tub::before {
-    background-image: url(../img/svg/tub.svg);
+    background-image: url("../img/svg/tub.svg");
     background-size: 31px 32px;
   }
 
   &--eat::before {
-    background-image: url(../img/svg/eat.svg);
+    background-image: url("../img/svg/eat.svg");
     background-size: 31px 32px;
   }
 
   &--clock::before {
-    background-image: url(../img/svg/clock.svg);
+    background-image: url("../img/svg/clock.svg");
     background-size: 31px 32px;
   }
 
