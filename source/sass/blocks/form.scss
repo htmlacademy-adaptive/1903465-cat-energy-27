@@ -241,6 +241,11 @@
   border-color: $color-silver;
 }
 
+.form__control-input:focus + .form__mark,
+.form__control-input:focus + .form__mark-checkbox {
+  outline: 1px solid $color-black;
+}
+
 .form__control-input:disabled ~ .form__mark,
 .form__control-input:disabled ~ .form__input-text,
 .form__control-input:disabled ~ .form__mark-checkbox {

@@ -39,6 +39,10 @@
     background-size: cover;
     z-index: -1;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+
     @media (min-width: $vp-768) {
       content: none;
     }
