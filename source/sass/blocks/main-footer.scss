@@ -5,7 +5,11 @@
   background-color: $color-white-smoke;
 
   @media (min-width: $vp-768) {
-    padding: 64px 0 55px 0;
+    padding: 55px 0 55px 0;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding-top: 64px;
   }
 
   &--catalog {

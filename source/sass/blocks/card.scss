@@ -216,7 +216,7 @@
     text-align: right;
   }
 
-  @media (min-width: $vp-768) {
+  @media (min-width: $vp-1024) {
     text-align: unset;
     transform: translate(11px, 3px);
   }

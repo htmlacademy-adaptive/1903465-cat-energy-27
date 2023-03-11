@@ -88,6 +88,12 @@
   }
 }
 
+.contacts__address--index .contacts__text-street {
+  @media (min-width: $vp-1024) {
+    margin-bottom: 19px;
+  }
+}
+
 .contacts__title {
   max-width: 140px;
   margin: 0;
