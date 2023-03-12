@@ -146,7 +146,7 @@
 
 .main-header__nav {
   @media (min-width: $vp-768) {
-    display: flex;    ;
+    display: flex;
     margin-left: auto;
   }
 
@@ -157,20 +157,19 @@
 }
 
 .main-header__nav-list {
+  @include list-reset;
   position: absolute;
   top: 65px;
   left: -20px;
   z-index: 3;
   display: none;
   width: calc(100% + 40px);
-  @include list-reset;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   color: $color-black;
   background-color: $color-white;
   text-transform: uppercase;
-
 
   @media (min-width: $vp-768) {
     position: static;
@@ -276,7 +275,7 @@
   &:hover,
   &:focus {
     opacity: 0.6;
-    }
+  }
 
   &:active {
     opacity: 0.3;
